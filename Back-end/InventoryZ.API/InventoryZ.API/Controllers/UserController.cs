@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using InventoryZ.Application.Commands.RegisterUser;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,9 +17,13 @@ namespace InventoryZ.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("register")]
-        public IActionResult CreateUser()
+        [HttpPost("register")]
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserCommand command)
         {
+            var response = await _mediator.Send(command);
+
+            if (!response)
+                return BadRequest();
 
             return Ok();
         }

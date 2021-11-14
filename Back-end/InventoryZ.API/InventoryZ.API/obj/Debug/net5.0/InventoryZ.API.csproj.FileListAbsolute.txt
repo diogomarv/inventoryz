@@ -74,3 +74,7 @@ C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\De
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Infrastructure.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Infrastructure.pdb
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Core.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\MediatR.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Application.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Application.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

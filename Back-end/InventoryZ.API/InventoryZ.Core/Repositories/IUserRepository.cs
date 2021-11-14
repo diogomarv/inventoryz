@@ -9,7 +9,7 @@ namespace InventoryZ.Core.Repositories
 {
     public interface IUserRepository
     {
-        Task CreateUser(User user);
+        Task<bool> RegisterUser(User user);
         Task<User> GetUserById(int id);
         Task<User> GetUserByLogin(string login);
         Task<User> GetUserByEmail(string email);

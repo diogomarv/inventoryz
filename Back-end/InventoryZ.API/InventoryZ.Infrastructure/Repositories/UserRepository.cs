@@ -17,12 +17,15 @@ namespace InventoryZ.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task CreateUser(User user)
+        public async Task<bool> RegisterUser(User user)
         {
             try
             {
-               await _context.User.AddAsync(user);
-               await  _context.SaveChangesAsync();
+                await _context.User.AddAsync(user);
+                await  _context.SaveChangesAsync();
+
+                return true;
+
             }catch(Exception e)
             {
                 throw new Exception("Houve um erro ao criar o usuário. Erro: ", e);

@@ -10,6 +10,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
+using InventoryZ.Application.Commands.RegisterUser;
+using InventoryZ.Core.Repositories;
+using InventoryZ.Infrastructure.Repositories;
 
 namespace InventoryZ.API
 {
@@ -29,6 +33,10 @@ namespace InventoryZ.API
 
             services.AddDbContext<DataBaseContext>
                 (options => options.UseSqlServer(connectionString));
+
+            services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddMediatR(typeof(RegisterUserCommand));
 
             services.AddControllersWithViews();
 
