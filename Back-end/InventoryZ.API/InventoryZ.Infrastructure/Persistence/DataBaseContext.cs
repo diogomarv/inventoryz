@@ -13,8 +13,8 @@ namespace InventoryZ.Infrastructure.Persistence
     {
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options) { }
 
-        DbSet<User> User { get; set; }
-        DbSet<Product> Product { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Product> Product { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

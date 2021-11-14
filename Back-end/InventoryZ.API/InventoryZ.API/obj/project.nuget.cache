@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XAInewem1rOF9EQImEVw+GacE4ciSGIFpD969Y7ka6qOHN8CKjJaanLWVKjXCPjyBBc/8Bi91JRkTrvrTR4EQQ==",
+  "dgSpecHash": "y3CiWqETgJwGnTcnXydj0+mWpDrGwTpwf0zSHWxMSHFdmDwsIiPIjomH3GZ/TYGKP9xFQ94kB7pWOnWMfJsCWQ==",
   "success": true,
   "projectFilePath": "C:\\Git\\college-projects\\InventoryZ\\Back-end\\InventoryZ.API\\InventoryZ.API\\InventoryZ.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diogo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Diogo\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
