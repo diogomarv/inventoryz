@@ -1519,6 +1519,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "InventoryZ.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/InventoryZ.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InventoryZ.Core.dll": {}
+        }
       }
     }
   },
@@ -5787,10 +5797,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "InventoryZ.Core/1.0.0": {
+      "type": "project",
+      "path": "../InventoryZ.Core/InventoryZ.Core.csproj",
+      "msbuildProject": "../InventoryZ.Core/InventoryZ.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "InventoryZ.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.12"
@@ -5826,7 +5842,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Git\\college-projects\\InventoryZ\\Back-end\\InventoryZ.API\\InventoryZ.Core\\InventoryZ.Core.csproj": {
+              "projectPath": "C:\\Git\\college-projects\\InventoryZ\\Back-end\\InventoryZ.API\\InventoryZ.Core\\InventoryZ.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

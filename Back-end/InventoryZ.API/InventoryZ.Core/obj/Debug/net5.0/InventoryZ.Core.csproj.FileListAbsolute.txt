@@ -1,0 +1,12 @@
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\bin\Debug\net5.0\InventoryZ.Core.deps.json
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\bin\Debug\net5.0\InventoryZ.Core.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\bin\Debug\net5.0\ref\InventoryZ.Core.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\bin\Debug\net5.0\InventoryZ.Core.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.csproj.AssemblyReference.cache
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.AssemblyInfoInputs.cache
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.AssemblyInfo.cs
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.csproj.CoreCompileInputs.cache
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\ref\InventoryZ.Core.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Core\obj\Debug\net5.0\InventoryZ.Core.pdb

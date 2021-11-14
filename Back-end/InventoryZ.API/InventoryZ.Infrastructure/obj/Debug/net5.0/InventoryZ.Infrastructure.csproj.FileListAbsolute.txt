@@ -1,0 +1,17 @@
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Infrastructure.deps.json
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Infrastructure.runtimeconfig.json
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Infrastructure.runtimeconfig.dev.json
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Infrastructure.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\ref\InventoryZ.Infrastructure.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Infrastructure.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Core.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\bin\Debug\net5.0\InventoryZ.Core.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.csproj.AssemblyReference.cache
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.AssemblyInfoInputs.cache
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.AssemblyInfo.cs
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\ref\InventoryZ.Infrastructure.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.genruntimeconfig.cache
