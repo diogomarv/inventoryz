@@ -78,3 +78,7 @@ C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\De
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Application.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\InventoryZ.Application.pdb
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\FluentValidation.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\obj\Debug\net5.0\InventoryZ.API.MvcApplicationPartsAssemblyInfo.cs

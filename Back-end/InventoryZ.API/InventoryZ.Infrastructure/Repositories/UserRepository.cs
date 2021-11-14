@@ -19,6 +19,7 @@ namespace InventoryZ.Infrastructure.Repositories
 
         public async Task<bool> RegisterUser(User user)
         {
+
             try
             {
                 await _context.User.AddAsync(user);

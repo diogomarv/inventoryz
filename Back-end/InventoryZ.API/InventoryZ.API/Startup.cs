@@ -14,6 +14,9 @@ using MediatR;
 using InventoryZ.Application.Commands.RegisterUser;
 using InventoryZ.Core.Repositories;
 using InventoryZ.Infrastructure.Repositories;
+using InventoryZ.API.Filters;
+using FluentValidation.AspNetCore;
+using InventoryZ.Application.Validators;
 
 namespace InventoryZ.API
 {
@@ -37,6 +40,10 @@ namespace InventoryZ.API
             services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddMediatR(typeof(RegisterUserCommand));
+
+            // Fluent Validation configs
+            services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<RegisterUserCommandValidator>());
 
             services.AddControllersWithViews();
 
