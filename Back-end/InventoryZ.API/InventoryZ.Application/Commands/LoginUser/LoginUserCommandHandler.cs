@@ -24,11 +24,20 @@ namespace InventoryZ.Application.Commands.LoginUser
 
         public async Task<LoginUserViewModel> Handle(LoginUserCommand request, CancellationToken cancellationToken)
         {
+
             // turn the password into hash
             var hashPassword = _authService.GenerateSha256Hash(request.Password);
 
             // check if email and passwords matches
-            var emailAndPasswordMatches = await _userRepository.GetUserByEmailAndPassword(request.Email, request.Password) != null ? true : false;
+            var emailAndPasswordMatches = await _userRepository.GetUserByEmailAndPassword(request.Email, hashPassword) != null ? true : false;
+
+            // if matches, generate the token
+            if (!emailAndPasswordMatches)
+                return null;
+
+            string token = _authService.GenerateJwtToken(request.Email);
+
+            return new LoginUserViewModel { Email = request.Email, Token = token };
 
             
 

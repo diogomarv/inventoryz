@@ -9,5 +9,7 @@ namespace InventoryZ.Core.Services
     public interface IAuthService
     {
         string GenerateSha256Hash(string password);
+        string GenerateJwtToken(string email);
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using InventoryZ.Application.Commands.RegisterUser;
+﻿using InventoryZ.Application.Commands.LoginUser;
+using InventoryZ.Application.Commands.RegisterUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -29,9 +30,9 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpPut("login")]
-        public async Task<IActionResult> Login([FromBody] )
+        public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
         {
-
+            
         }
     }
 }
