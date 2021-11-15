@@ -43,6 +43,19 @@ namespace InventoryZ.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
+        public async Task<Product> GetProductByUserIdAsync(int id)
+        {
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                var script = @"SELECT * FROM [InventoryZ].dbo.[Product]
+                               WHERE IdUser = @id;";
+
+                var product = await sqlConnection.QueryAsync<Product>(script, new { id });
+                
+                return product.FirstOrDefault();
+            }
+        }
+
         public async Task<bool> InsertProduct(Product product)
         {
 
@@ -63,6 +76,11 @@ namespace InventoryZ.Infrastructure.Repositories
             {
                 throw new Exception("Houve um erro ao inserir o produto. Erro: ", e);
             }
+        }
+
+        public Task<bool> RemoveProductAsync(int idProduct, int idUser)
+        {
+            throw new NotImplementedException();
         }
     }
 }

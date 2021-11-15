@@ -42,7 +42,7 @@ namespace InventoryZ.Infrastructure.Auth
                 (
                 issuer: issuer,
                 audience: audience,
-                expires: DateTime.Now.AddSeconds(20),
+                expires: DateTime.Now.AddHours(8),
                 signingCredentials: credentials,
                 claims: claim
                 );

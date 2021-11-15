@@ -10,7 +10,9 @@ namespace InventoryZ.Core.Repositories
     public interface IProductRepository
     {
         Task<bool> InsertProduct(Product product);
+        Task<bool> RemoveProductAsync(int idProduct, int idUser);
         Task<Product> GetProductByEmailUser(string email);
+        Task<Product> GetProductByUserIdAsync(int id);
         Task<List<Product>> GetAllProductsByUser(string email);
         
     }
