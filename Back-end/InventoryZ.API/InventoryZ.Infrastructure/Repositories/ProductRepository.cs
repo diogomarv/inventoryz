@@ -1,7 +1,10 @@
-﻿using InventoryZ.Core.Entities;
+﻿using Dapper;
+using InventoryZ.Core.Entities;
 using InventoryZ.Core.Repositories;
 using InventoryZ.Infrastructure.Persistence;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +16,26 @@ namespace InventoryZ.Infrastructure.Repositories
     public class ProductRepository : IProductRepository
     {
         private readonly DataBaseContext _context;
-        public ProductRepository(DataBaseContext context)
+        private string connectionString;
+        public ProductRepository(DataBaseContext context, IConfiguration configuration)
         {
             _context = context;
+            connectionString = configuration.GetConnectionString("DataBaseInventoryZ");
         }
 
-        public Task<List<Product>> GetAllProductsByUser(string email)
+        public async Task<List<Product>> GetAllProductsByUser(string email)
         {
-            throw new NotImplementedException();
+            var user = await _context.User.Where(u => u.Email == email).FirstOrDefaultAsync();
+
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                string sql = @"SELECT * FROM [InventoryZ].dbo.[Product]
+                               WHERE IdUser = @id;";
+
+                var products = sqlConnection.Query<Product>(sql, new { id = user.Id }).ToList();
+
+                return products;
+            }
         }
 
         public Task<Product> GetProductByEmailUser(string email)

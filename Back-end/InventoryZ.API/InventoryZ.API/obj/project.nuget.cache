@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PGptUms/0kf007MX1gDQub2LWf4kdp9IMKQyf97sE/1Ke9xgYLKaIYC8NnM9RC3DMfGgu20Ig73gQHMDtlu48w==",
+  "dgSpecHash": "oplWk6BxyOYiGeXG4hHzK335tjVqne0deG5GlIjtW+PWF1iYuPwkDb9fcxx4f2RiuUI33cqNmHPOEy0/ONw4qQ==",
   "success": true,
   "projectFilePath": "C:\\Git\\college-projects\\InventoryZ\\Back-end\\InventoryZ.API\\InventoryZ.API\\InventoryZ.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Diogo\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.4\\fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.4\\fluentvalidation.dependencyinjectionextensions.10.3.4.nupkg.sha512",

@@ -12,5 +12,6 @@ namespace InventoryZ.Core.Repositories
         Task<bool> InsertProduct(Product product);
         Task<Product> GetProductByEmailUser(string email);
         Task<List<Product>> GetAllProductsByUser(string email);
+        
     }
 }
