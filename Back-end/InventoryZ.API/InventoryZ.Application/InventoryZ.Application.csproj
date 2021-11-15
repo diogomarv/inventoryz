@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\LoginUser\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 

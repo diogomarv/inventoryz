@@ -62,5 +62,10 @@ namespace InventoryZ.Infrastructure.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public async Task<User> GetUserByEmailAndPassword(string email, string password)
+        {
+            return await _context.User.Where(u => u.Email == email && u.Password == password).FirstOrDefaultAsync();
+        }
     }
 }

@@ -27,5 +27,11 @@ namespace InventoryZ.API.Controllers
 
             return Ok("Usuario cadastrado com sucesso!");
         }
+
+        [HttpPut("login")]
+        public async Task<IActionResult> Login([FromBody] )
+        {
+
+        }
     }
 }
