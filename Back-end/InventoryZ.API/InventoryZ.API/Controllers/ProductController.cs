@@ -11,8 +11,8 @@ namespace InventoryZ.API.Controllers
     [Authorize]
     public class ProductController : ControllerBase
     {
-        [HttpGet("teste")]
-        public IActionResult TesteProduto()
+        [HttpGet("insert")]
+        public IActionResult InsertProduct()
         {
             return Ok();
         }
