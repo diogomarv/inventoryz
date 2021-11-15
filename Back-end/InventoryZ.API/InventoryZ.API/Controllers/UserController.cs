@@ -32,7 +32,12 @@ namespace InventoryZ.API.Controllers
         [HttpPut("login")]
         public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
         {
-            
+            var response = await _mediator.Send(command);
+
+            if (response == null)
+                return BadRequest("Login e/ou senha inválidos.");
+
+            return Ok(response);
         }
     }
 }
