@@ -8,6 +8,17 @@ namespace InventoryZ.Core.Entities
 {
     public class Product
     {
+        public Product(string name, string description, decimal price, int amount, int soldAmount, User user)
+        {
+            Name = name;
+            Description = description;
+            Price = price;
+            Amount = amount;
+            SoldAmount = soldAmount;
+            Date = DateTime.Now;
+            User = user;
+        }
+
         public int Id { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }

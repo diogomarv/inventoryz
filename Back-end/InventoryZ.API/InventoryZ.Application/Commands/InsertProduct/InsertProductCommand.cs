@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using InventoryZ.Core.Entities;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,6 @@ namespace InventoryZ.Application.Commands.InsertProduct
         /// <summary>
         /// Email - User email
         /// </summary>
-        public string Email { get; set; }
+        public User User { get; set; }
     }
 }

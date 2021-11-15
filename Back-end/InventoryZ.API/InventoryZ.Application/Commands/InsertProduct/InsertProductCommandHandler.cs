@@ -1,4 +1,5 @@
-﻿using InventoryZ.Core.Repositories;
+﻿using InventoryZ.Core.Entities;
+using InventoryZ.Core.Repositories;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -18,9 +19,11 @@ namespace InventoryZ.Application.Commands.InsertProduct
             _productRepository = productRepository;
         }
 
-        public Task<bool> Handle(InsertProductCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(InsertProductCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            Product product = new Product(request.Name, request.Description, request.Price, request.Amount, request.SoldAmount, request.User);
+
+            return await _productRepository.InsertProduct(product);
         }
     }
 }
