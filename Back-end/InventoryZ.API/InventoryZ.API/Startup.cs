@@ -17,6 +17,8 @@ using InventoryZ.Infrastructure.Repositories;
 using InventoryZ.API.Filters;
 using FluentValidation.AspNetCore;
 using InventoryZ.Application.Validators;
+using InventoryZ.Core.Services;
+using InventoryZ.Infrastructure.Auth;
 
 namespace InventoryZ.API
 {
@@ -38,6 +40,7 @@ namespace InventoryZ.API
                 (options => options.UseSqlServer(connectionString));
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAuthService, AuthService>();
 
             services.AddMediatR(typeof(RegisterUserCommand));
 

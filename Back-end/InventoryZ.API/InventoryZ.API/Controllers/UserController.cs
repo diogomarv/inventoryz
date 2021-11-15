@@ -23,9 +23,9 @@ namespace InventoryZ.API.Controllers
             var response = await _mediator.Send(command);
 
             if (!response)
-                return BadRequest();
+                return BadRequest("Já existe um usuário cadastrado com este e-mail.");
 
-            return Ok();
+            return Ok("Usuario cadastrado com sucesso!");
         }
     }
 }

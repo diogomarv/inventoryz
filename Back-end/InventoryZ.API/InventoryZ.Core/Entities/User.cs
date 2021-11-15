@@ -10,7 +10,7 @@ namespace InventoryZ.Core.Entities
     {
 
         public int Id { get; private set; }
-        public string Login { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public bool Active { get; private set; } = true;

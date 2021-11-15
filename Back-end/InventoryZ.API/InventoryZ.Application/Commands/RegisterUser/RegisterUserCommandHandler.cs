@@ -1,4 +1,5 @@
 ﻿using InventoryZ.Core.Repositories;
+using InventoryZ.Core.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -13,16 +14,20 @@ namespace InventoryZ.Application.Commands.RegisterUser
     {
 
         private readonly IUserRepository _userRepository;
+        private readonly IAuthService _auth;
 
-        public RegisterUserCommandHandler(IUserRepository userRepository)
+        public RegisterUserCommandHandler(IUserRepository userRepository, IAuthService auth)
         {
             _userRepository = userRepository;
+            _auth = auth;
         }
 
         public async Task<bool> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
 
-            return await _userRepository.RegisterUser(new Core.Entities.User() { Login = request.Login, Email = request.Email, Password = request.Password });
+            var hashPassword = _auth.GenerateSha256Hash(request.Password);
+
+            return await _userRepository.RegisterUser(new Core.Entities.User() { Name = request.Name, Email = request.Email, Password = hashPassword });
             
         }
     }

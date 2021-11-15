@@ -1,6 +1,7 @@
 ﻿using InventoryZ.Core.Entities;
 using InventoryZ.Core.Repositories;
 using InventoryZ.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,14 @@ namespace InventoryZ.Infrastructure.Repositories
 
             try
             {
+
+                var emailAlreadyExists = await GetUserByEmail(user.Email) != null ? true : false;
+
+                if (emailAlreadyExists)
+                {
+                    return false;
+                }
+                
                 await _context.User.AddAsync(user);
                 await  _context.SaveChangesAsync();
 
@@ -39,9 +48,9 @@ namespace InventoryZ.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<User> GetUserByEmail(string email)
+        public async Task<User> GetUserByEmail(string email)
         {
-            throw new NotImplementedException();
+            return await _context.User.Where(u => u.Email == email).FirstOrDefaultAsync();
         }
 
         public Task<User> GetUserById(int id)
