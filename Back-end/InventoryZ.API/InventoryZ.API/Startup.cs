@@ -23,6 +23,7 @@ using InventoryZ.Application.Commands.LoginUser;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using InventoryZ.Application.Commands.InsertProduct;
 
 namespace InventoryZ.API
 {
@@ -43,11 +44,13 @@ namespace InventoryZ.API
             services.AddDbContext<DataBaseContext>
                 (options => options.UseSqlServer(connectionString));
 
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAuthService, AuthService>();
 
             services.AddMediatR(typeof(RegisterUserCommand));
             services.AddMediatR(typeof(LoginUserCommand));
+            services.AddMediatR(typeof(InsertProductCommand));
 
             // Fluent Validation configs
             services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
