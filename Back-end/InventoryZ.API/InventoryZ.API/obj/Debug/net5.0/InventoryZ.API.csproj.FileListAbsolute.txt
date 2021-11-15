@@ -52,7 +52,6 @@ C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\De
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -82,3 +81,4 @@ C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\De
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\obj\Debug\net5.0\InventoryZ.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

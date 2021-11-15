@@ -19,6 +19,10 @@ using FluentValidation.AspNetCore;
 using InventoryZ.Application.Validators;
 using InventoryZ.Core.Services;
 using InventoryZ.Infrastructure.Auth;
+using InventoryZ.Application.Commands.LoginUser;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace InventoryZ.API
 {
@@ -43,12 +47,31 @@ namespace InventoryZ.API
             services.AddScoped<IAuthService, AuthService>();
 
             services.AddMediatR(typeof(RegisterUserCommand));
+            services.AddMediatR(typeof(LoginUserCommand));
 
             // Fluent Validation configs
             services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<RegisterUserCommandValidator>());
 
             services.AddControllersWithViews();
+
+            services
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+
+                        ValidIssuer = Configuration["Jwt:Issuer"],
+                        ValidAudience = Configuration["Jwt:Audience"],
+                        IssuerSigningKey = new SymmetricSecurityKey
+                        (Encoding.UTF8.GetBytes(Configuration["Jwt:key"]))
+                    };
+                });
 
         }
 
