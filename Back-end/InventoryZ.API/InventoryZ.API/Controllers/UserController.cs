@@ -1,6 +1,7 @@
 ﻿using InventoryZ.Application.Commands.LoginUser;
 using InventoryZ.Application.Commands.RegisterUser;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace InventoryZ.API.Controllers
 {
     [Route("/api/[controller]")]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -19,6 +21,7 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpPost("register")]
+        [AllowAnonymous]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserCommand command)
         {
             var response = await _mediator.Send(command);
@@ -30,6 +33,7 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpPut("login")]
+        [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
         {
             var response = await _mediator.Send(command);
