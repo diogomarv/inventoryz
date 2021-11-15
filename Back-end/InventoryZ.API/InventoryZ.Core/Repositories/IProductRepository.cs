@@ -12,7 +12,7 @@ namespace InventoryZ.Core.Repositories
         Task<bool> InsertProduct(Product product);
         Task<bool> RemoveProductAsync(int idProduct, int idUser);
         Task<Product> GetProductByEmailUser(string email);
-        Task<Product> GetProductByUserIdAsync(int id);
+        Task<Product> GetProductByUserIdAsync(int idProduct, int idUser);
         Task<List<Product>> GetAllProductsByUser(string email);
         
     }

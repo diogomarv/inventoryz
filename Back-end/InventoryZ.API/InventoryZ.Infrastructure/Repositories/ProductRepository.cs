@@ -43,14 +43,14 @@ namespace InventoryZ.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<Product> GetProductByUserIdAsync(int id)
+        public async Task<Product> GetProductByUserIdAsync(int idProduct, int idUser)
         {
             using (var sqlConnection = new SqlConnection(connectionString))
             {
                 var script = @"SELECT * FROM [InventoryZ].dbo.[Product]
-                               WHERE IdUser = @id;";
+                               WHERE Id = @idProduct AND IdUser = @idUser;";
 
-                var product = await sqlConnection.QueryAsync<Product>(script, new { id });
+                var product = await sqlConnection.QueryAsync<Product>(script, new { idProduct, idUser });
                 
                 return product.FirstOrDefault();
             }
