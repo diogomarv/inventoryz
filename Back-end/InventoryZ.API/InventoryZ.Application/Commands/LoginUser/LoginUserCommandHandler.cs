@@ -28,9 +28,10 @@ namespace InventoryZ.Application.Commands.LoginUser
             var hashPassword = _authService.GenerateSha256Hash(request.Password);
 
             // check if email and passwords matches
+            var emailAndPasswordMatches = await _userRepository.GetUserByEmailAndPassword(request.Email, request.Password) != null ? true : false;
+
             
 
-            // if it does, generate the token
         }
     }
 }
