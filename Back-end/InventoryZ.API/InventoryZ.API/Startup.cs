@@ -24,6 +24,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using InventoryZ.Application.Commands.InsertProduct;
+using InventoryZ.Application.Commands.RemoveProduct;
 
 namespace InventoryZ.API
 {
@@ -51,6 +52,7 @@ namespace InventoryZ.API
             services.AddMediatR(typeof(RegisterUserCommand));
             services.AddMediatR(typeof(LoginUserCommand));
             services.AddMediatR(typeof(InsertProductCommand));
+            services.AddMediatR(typeof(RemoveProductCommand));
 
             // Fluent Validation configs
             services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))

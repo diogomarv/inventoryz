@@ -1,0 +1,33 @@
+<div class="box-login">
+    <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+        <h3>Enjoy us with a new account</h3>
+
+        <div class="box-input">
+            <label for="username">Choose one cool username</label>
+            <input type="username" formControlName="UserName" placeholder="ex: nick_toledo">
+        </div>
+
+
+        <div class="box-input">
+            <label for="email">Type your e-mail</label>
+            <input type="email" placeholder="youremail@example.com" formControlName="Email">
+        </div>
+
+        <div formGroupName="Passwords">
+            <div class="box-input">
+                <label for="password">Enter a password</label>
+                <input type="password" placeholder="S0m3th1ng S#f3" formControlName="Password">
+            </div>
+
+            <div class="box-input">
+                <label for="password">Repeat your password</label>
+                <input type="password" placeholder="S0m3th1ng S#f3" formControlName="ConfirmPassword">
+            </div>
+        </div>
+
+        <button type="submit" >Register</button>
+    </form>
+
+    <span>Already have an account? <br> <a href="/">Just log in!</a> </span>
+
+</div>

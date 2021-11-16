@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Roboto:wght@100;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html{
+    height: 100%;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+
+*{
+    color: rgb(72, 72, 72);
+}
+
+.box-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    // margin: 0 auto;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background-color: #fff;
+    // max-width: 420px;
+    width: 400px;
+    min-height: 500px;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.box-input{
+    margin: 20px 0;
+    
+}
+
+.box-input label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.box-input input{
+    width: 230px;
+    height: 40px;
+    border-style: none;
+    border-radius: 20px;
+    background-color: #E8F0FE;
+    padding: 5px 7px;
+    outline: none;
+    text-align: center;
+}
+
+button{
+    border-radius: 20px;
+    border-style: none;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(115, 183, 185);
+    color: #fff;
+    transition: 0.5s;
+}
+
+button:hover{
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+    background-color: rgb(141, 217, 219);
+}
+
+span{
+    margin: 20px 0;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: cadetblue;
+}
+

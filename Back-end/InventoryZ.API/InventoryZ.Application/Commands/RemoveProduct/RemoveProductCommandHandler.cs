@@ -19,11 +19,6 @@ namespace InventoryZ.Application.Commands.RemoveProduct
         }
         public async Task<bool> Handle(RemoveProductCommand request, CancellationToken cancellationToken)
         {
-            // Check if the product belongs to the user 
-            var product = await _productRepository.GetProductByUserIdAsync(request.IdUser);
-
-            if (product != null)
-                return false;
 
             return await _productRepository.RemoveProductAsync(request.IdProduct, request.IdUser);
 

@@ -78,9 +78,24 @@ namespace InventoryZ.Infrastructure.Repositories
             }
         }
 
-        public Task<bool> RemoveProductAsync(int idProduct, int idUser)
+        public async Task<bool> RemoveProductAsync(int idProduct, int idUser)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Check if the product belongs to the user
+                var product = await GetProductByUserIdAsync(idProduct, idUser);
+
+                if (product == null)
+                    return false;
+                
+                _context.Product.Remove(product);
+                await _context.SaveChangesAsync();
+                return true;
+
+            }catch(Exception e)
+            {
+                throw new Exception("Houve um erro ao deletar o produto. Erro: ", e);
+            }
         }
     }
 }
