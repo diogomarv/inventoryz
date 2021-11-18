@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Shippori+Antique+B1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Shippori Antique B1', sans-serif;
+}
+
+html, body{
+    // width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgb(89, 114, 223) 0%, rgb(148, 149, 233) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#98a4db",endColorstr="#94bbe9",GradientType=1);
+}
