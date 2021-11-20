@@ -18,7 +18,6 @@ namespace InventoryZ.Application.Validators
 
             RuleFor(u => u.Password)
                 .NotEmpty()
-                .Matches(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$")
                 .WithMessage("Senha inválida. Sua senha precisa ter no mínimo um caractere maiúsculo, uma minúscula e no mínimo um número.");
         }
 

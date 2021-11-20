@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace InventoryZ.API.Controllers
 {
-    [Route("/api/[controller]")]
     [Authorize]
+    [ApiController]
+    [Route("/api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -42,6 +43,12 @@ namespace InventoryZ.API.Controllers
                 return BadRequest("Login e/ou senha inválidos.");
 
             return Ok(response);
+        }
+
+        [HttpGet("userInformation")]
+        public async Task<IActionResult> GetUserInformations([FromBody] )
+        {
+
         }
     }
 }
