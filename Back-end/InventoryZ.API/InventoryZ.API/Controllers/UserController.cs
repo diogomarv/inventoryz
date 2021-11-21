@@ -1,5 +1,6 @@
 ﻿using InventoryZ.Application.Commands.LoginUser;
 using InventoryZ.Application.Commands.RegisterUser;
+using InventoryZ.Application.Queries.GetUserInformations;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -46,9 +47,13 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpGet("userInformation")]
-        public async Task<IActionResult> GetUserInformations([FromBody] )
+        public async Task<IActionResult> GetUserInformations([FromQuery] int userId)
         {
+            var user = new GetUserInformationsQuery(userId);
 
+            var response = await _mediator.Send(user);
+
+            return Ok(response);
         }
     }
 }

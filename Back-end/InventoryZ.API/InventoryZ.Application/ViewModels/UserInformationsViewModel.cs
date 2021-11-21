@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryZ.Application.ViewModes
+namespace InventoryZ.Application.ViewModels
 {
-    public class LoginUserViewModel
+    public class UserInformationsViewModel
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public string Email { get; set; }
-        public string Token { get; set; }
+        public string ProfilePhoto { get; set; }
     }
 }

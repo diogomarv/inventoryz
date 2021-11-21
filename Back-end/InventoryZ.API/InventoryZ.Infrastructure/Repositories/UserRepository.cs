@@ -1,7 +1,10 @@
-﻿using InventoryZ.Core.Entities;
+﻿using Dapper;
+using InventoryZ.Core.Entities;
 using InventoryZ.Core.Repositories;
 using InventoryZ.Infrastructure.Persistence;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +16,11 @@ namespace InventoryZ.Infrastructure.Repositories
     public class UserRepository : IUserRepository
     {
         private readonly DataBaseContext _context;
-        public UserRepository(DataBaseContext context)
+        private string connectionString;
+        public UserRepository(DataBaseContext context, IConfiguration configuration)
         {
             _context = context;
+            connectionString = configuration.GetConnectionString("DataBaseInventoryZ");
         }
 
         public async Task<bool> RegisterUser(User user)
@@ -50,12 +55,32 @@ namespace InventoryZ.Infrastructure.Repositories
 
         public async Task<User> GetUserByEmail(string email)
         {
-            return await _context.User.Where(u => u.Email == email).FirstOrDefaultAsync();
+
+            //string script = @"SELECT 
+            //                   [Id]
+            //                  ,[Name]
+            //                  ,[Email]
+            //                  ,[Password]
+            //                  ,[ProfilePhoto]
+            //                FROM[InventoryZ].[dbo].[User]
+            //                WHERE Email = '@email' ";
+
+            throw new NotImplementedException();
+
         }
 
-        public Task<User> GetUserById(int id)
+        public async Task<User> GetUserById(int id)
         {
-            throw new NotImplementedException();
+                try
+                {
+                    var user = await _context.User.Where(u => u.Id == id).FirstOrDefaultAsync();
+                    
+                    return user;
+
+                }catch(Exception e)
+                {
+                    throw new Exception("Ocorreu um erro ao buscar o usuário. Erro: ", e);
+                }
         }
 
         public Task<User> GetUserByLogin(string login)
@@ -65,7 +90,9 @@ namespace InventoryZ.Infrastructure.Repositories
 
         public async Task<User> GetUserByEmailAndPassword(string email, string password)
         {
-            return await _context.User.Where(u => u.Email == email && u.Password == password).FirstOrDefaultAsync();
+            var user = await _context.User.Where(u => u.Email == email && u.Password == password).FirstOrDefaultAsync();
+
+            return user;
         }
     }
 }

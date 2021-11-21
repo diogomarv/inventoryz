@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4MgGu3h7JYtU8EHoVuQdR3Ck2eX/5vgOQu/GOjMjeLXZX6/25zvLWuxboKWpoZNUdHwBbRwR1IgyxzKv+mLVCw==",
+  "dgSpecHash": "OeDWHuq5KNckOUnKyitGrAFN8MwoXD6RuJ1yBmK2eaP+xIX2TnEvwdgA9xwdprWEFZsB3HmMs658Y31pT5lh4Q==",
   "success": true,
   "projectFilePath": "C:\\Git\\college-projects\\InventoryZ\\Back-end\\InventoryZ.API\\InventoryZ.API\\InventoryZ.API.csproj",
   "expectedPackageFiles": [
@@ -102,7 +102,8 @@
     "C:\\Users\\Diogo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Diogo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Diogo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Diogo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Diogo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }

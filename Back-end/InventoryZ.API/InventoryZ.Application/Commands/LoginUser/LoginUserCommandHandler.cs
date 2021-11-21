@@ -29,7 +29,9 @@ namespace InventoryZ.Application.Commands.LoginUser
             var hashPassword = _authService.GenerateSha256Hash(request.Password);
 
             // check if email and passwords matches
-            var emailAndPasswordMatches = await _userRepository.GetUserByEmailAndPassword(request.Email, hashPassword) != null ? true : false;
+            var user = await _userRepository.GetUserByEmailAndPassword(request.Email, hashPassword);
+
+            var emailAndPasswordMatches = user != null ? true : false;
 
             // if matches, generate the token
             if (!emailAndPasswordMatches)
@@ -37,7 +39,7 @@ namespace InventoryZ.Application.Commands.LoginUser
 
             string token = _authService.GenerateJwtToken(request.Email);
 
-            return new LoginUserViewModel { Email = request.Email, Token = token };
+            return new LoginUserViewModel { Id = user.Id, Email = request.Email, Token = token };
 
             
 
