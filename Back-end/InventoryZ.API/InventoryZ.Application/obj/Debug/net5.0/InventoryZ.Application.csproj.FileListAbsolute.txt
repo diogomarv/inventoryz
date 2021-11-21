@@ -12,3 +12,4 @@ C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Applicatio
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Application\obj\Debug\net5.0\InventoryZ.Application.pdb
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Application\bin\Debug\net5.0\InventoryZ.Core.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Application\bin\Debug\net5.0\InventoryZ.Core.pdb
+C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Application\obj\Debug\net5.0\InventoryZ.Application.csproj.CopyComplete

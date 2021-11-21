@@ -23,16 +23,15 @@ namespace InventoryZ.Infrastructure.Repositories
             connectionString = configuration.GetConnectionString("DataBaseInventoryZ");
         }
 
-        public async Task<List<Product>> GetAllProductsByUser(string email)
+        public async Task<List<Product>> GetAllProductsByUser(int id)
         {
-            var user = await _context.User.Where(u => u.Email == email).FirstOrDefaultAsync();
 
             using (var sqlConnection = new SqlConnection(connectionString))
             {
                 string sql = @"SELECT * FROM [InventoryZ].dbo.[Product]
                                WHERE IdUser = @id;";
 
-                var products = sqlConnection.Query<Product>(sql, new { id = user.Id }).ToList();
+                var products = sqlConnection.Query<Product>(sql, new { id }).ToList();
 
                 return products;
             }

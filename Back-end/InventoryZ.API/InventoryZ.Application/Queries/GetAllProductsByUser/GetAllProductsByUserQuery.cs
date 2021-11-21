@@ -11,6 +11,6 @@ namespace InventoryZ.Application.Queries.GetAllProductsByUser
 {
     public class GetAllProductsByUserQuery : IRequest<List<ProductViewModel>>
     {
-        public string Email { get; set; }
+        public int Id { get; set; }
     }
 }

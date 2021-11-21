@@ -33,11 +33,11 @@ namespace InventoryZ.API.Controllers
             return Ok("Produto cadastrado com sucesso!");
         }
 
-        [HttpGet("GetAllProducts/")]
-        public Task<List<ProductViewModel>> GetAllProducts([FromHeader] string email)
+        [HttpGet("AllProducts")]
+        public Task<List<ProductViewModel>> GetAllProducts([FromQuery] int idUser)
         {
             var p = new GetAllProductsByUserQuery();
-            p.Email = email;
+            p.Id = idUser;
 
             var products = _mediator.Send(p);
 

@@ -21,7 +21,7 @@ namespace InventoryZ.Application.Queries.GetAllProductsByUser
 
         public async Task<List<ProductViewModel>> Handle(GetAllProductsByUserQuery request, CancellationToken cancellationToken)
         {
-            var products = await _productRepository.GetAllProductsByUser(request.Email);
+            var products = await _productRepository.GetAllProductsByUser(request.Id);
 
             var productsViewModel = products.Select(p => new ProductViewModel(p.Id, p.Name, p.Description, p.Price, p.Amount, p.SoldAmount, p.Date) ).ToList();
 
