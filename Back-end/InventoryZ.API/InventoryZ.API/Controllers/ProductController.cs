@@ -34,14 +34,17 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpGet("AllProducts")]
-        public async Task<List<ProductViewModel>> GetAllProducts([FromQuery] int idUser)
+        public async Task<IActionResult> GetAllProducts([FromQuery] int idUser)
         {
             var p = new GetAllProductsByUserQuery();
             p.Id = idUser;
 
             var response = await _mediator.Send(p);
 
-            return response;
+            if (!response.Any())
+                return BadRequest("Não há produtos cadastrados.");
+
+            return Ok(response);
         }
 
         [HttpDelete("Remove")]
@@ -58,6 +61,9 @@ namespace InventoryZ.API.Controllers
 
             return Ok("Produto removido com sucesso!");
         }
+
+        [HttpPut("Update")]
+        public async Task<IActionResult>
 
     }
 }

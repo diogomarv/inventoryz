@@ -25,7 +25,7 @@ namespace InventoryZ.Infrastructure.Repositories
 
         public Task<bool> EditProduct(int idProduct, int idUser)
         {
-            throw new NotImplementedException();
+            
         }
 
         public async Task<List<Product>> GetAllProductsByUser(int id)
