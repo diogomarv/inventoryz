@@ -34,14 +34,14 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpGet("AllProducts")]
-        public Task<List<ProductViewModel>> GetAllProducts([FromQuery] int idUser)
+        public async Task<List<ProductViewModel>> GetAllProducts([FromQuery] int idUser)
         {
             var p = new GetAllProductsByUserQuery();
             p.Id = idUser;
 
-            var products = _mediator.Send(p);
+            var response = await _mediator.Send(p);
 
-            return products;
+            return response;
         }
 
         [HttpDelete("Remove")]
