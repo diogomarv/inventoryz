@@ -15,4 +15,3 @@ C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastruc
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\ref\InventoryZ.Infrastructure.dll
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.pdb
 C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.genruntimeconfig.cache
-C:\Git\college-projects\InventoryZ\Back-end\InventoryZ.API\InventoryZ.Infrastructure\obj\Debug\net5.0\InventoryZ.Infrastructure.csproj.CopyComplete

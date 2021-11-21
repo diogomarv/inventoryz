@@ -14,7 +14,7 @@ namespace InventoryZ.Core.Repositories
         Task<Product> GetProductByEmailUser(string email);
         Task<Product> GetProductByUserIdAsync(int idProduct, int idUser);
         Task<List<Product>> GetAllProductsByUser(int id);
-        Task<bool> EditProduct(int idProduct, int idUser);
+        Task<bool> EditProduct(Product product);
         
     }
 }

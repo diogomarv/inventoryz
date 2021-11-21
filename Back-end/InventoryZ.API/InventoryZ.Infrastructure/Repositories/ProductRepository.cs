@@ -23,9 +23,33 @@ namespace InventoryZ.Infrastructure.Repositories
             connectionString = configuration.GetConnectionString("DataBaseInventoryZ");
         }
 
-        public Task<bool> EditProduct(int idProduct, int idUser)
+        public async Task<bool> EditProduct(Product product)
         {
-            
+
+            try
+            {
+                using (var sqlConnection = new SqlConnection(connectionString))
+                {
+                    string script = @"  UPDATE Product
+                                        SET 
+                                         Name = @name,
+                                         Description = @description,
+                                         Price = @price,
+                                         Date = @date,
+                                         Amount = @amount
+                                        WHERE Id = @id;";
+
+                    await sqlConnection.QueryAsync<Product>(script, new { id = product.Id, name = product.Name, description = product.Description, price = product.Price, date = DateTime.Now, amount = product.Amount });
+
+                    return true;
+               
+                }
+            }catch(Exception e)
+            {
+                return false;
+                throw new Exception("Ocorreu um erro ao editar o produto. Erro: ", e);
+            }
+
         }
 
         public async Task<List<Product>> GetAllProductsByUser(int id)

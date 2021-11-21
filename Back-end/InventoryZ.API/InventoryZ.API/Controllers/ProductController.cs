@@ -1,5 +1,6 @@
 ﻿using InventoryZ.Application.Commands.InsertProduct;
 using InventoryZ.Application.Commands.RemoveProduct;
+using InventoryZ.Application.Commands.UpdateProduct;
 using InventoryZ.Application.Queries.GetAllProductsByUser;
 using InventoryZ.Application.ViewModels;
 using MediatR;
@@ -63,7 +64,15 @@ namespace InventoryZ.API.Controllers
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult>
+        public async Task<IActionResult> UpdateProduct([FromBody] UpdateProjectCommand command)
+        {
+            var response = await _mediator.Send(command);
+
+            if (!response)
+                return BadRequest("Houve um problema ao editar o produto. Tente novamente.");
+
+            return Ok("Produto editado com sucesso!");
+        }
 
     }
 }

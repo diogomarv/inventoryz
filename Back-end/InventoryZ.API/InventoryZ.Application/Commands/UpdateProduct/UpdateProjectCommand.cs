@@ -1,28 +1,15 @@
-﻿using System;
+﻿using InventoryZ.Core.Entities;
+using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryZ.Core.Entities
+namespace InventoryZ.Application.Commands.UpdateProduct
 {
-    public class Product
+    public class UpdateProjectCommand : IRequest<bool>
     {
-        public Product()
-        {
-                
-        }
-        public Product(string name, string description, decimal price, int amount, int soldAmount, DateTime date, User user)
-        {
-            Name = name;
-            Description = description;
-            Price = price;
-            Amount = amount;
-            SoldAmount = soldAmount;
-            Date = date;
-            User = user;
-        }
-
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
