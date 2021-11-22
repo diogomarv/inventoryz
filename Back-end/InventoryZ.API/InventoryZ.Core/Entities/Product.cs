@@ -12,7 +12,7 @@ namespace InventoryZ.Core.Entities
         {
                 
         }
-        public Product(string name, string description, decimal price, int amount, int soldAmount, DateTime date, User user)
+        public Product(string name, string description, decimal price, int amount, int soldAmount, DateTime date, int idUser)
         {
             Name = name;
             Description = description;
@@ -20,7 +20,7 @@ namespace InventoryZ.Core.Entities
             Amount = amount;
             SoldAmount = soldAmount;
             Date = date;
-            User = user;
+            IdUser = idUser;
         }
 
         public int Id { get; set; }

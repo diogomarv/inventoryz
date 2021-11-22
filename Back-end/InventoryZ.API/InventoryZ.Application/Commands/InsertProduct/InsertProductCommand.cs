@@ -16,6 +16,7 @@ namespace InventoryZ.Application.Commands.InsertProduct
         public int Amount { get; set; }
         public int SoldAmount { get; set; } = 0;
         public DateTime Date { get; set; }
+        public int IdUser { get; set; }
         /// <summary>
         /// Email - User email
         /// </summary>

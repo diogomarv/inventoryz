@@ -21,7 +21,7 @@ namespace InventoryZ.Application.Commands.InsertProduct
 
         public async Task<bool> Handle(InsertProductCommand request, CancellationToken cancellationToken)
         {
-            Product product = new Product(request.Name, request.Description, request.Price, request.Amount, request.SoldAmount, DateTime.Now, request.User);
+            Product product = new Product(request.Name, request.Description, request.Price, request.Amount, request.SoldAmount, DateTime.Now, request.IdUser);
 
             return await _productRepository.InsertProduct(product);
         }

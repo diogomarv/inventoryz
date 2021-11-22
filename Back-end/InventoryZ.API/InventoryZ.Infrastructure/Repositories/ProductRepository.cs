@@ -109,7 +109,7 @@ namespace InventoryZ.Infrastructure.Repositories
         public async Task<bool> InsertProduct(Product product)
         {
 
-            User user = await _context.User.Where(u => u.Email == product.User.Email).FirstOrDefaultAsync();
+            User user = await _context.User.Where(u => u.Id == product.IdUser).FirstOrDefaultAsync();
 
             if (user == null)
                 return false;
