@@ -2,6 +2,7 @@
 using InventoryZ.Application.Commands.RemoveProduct;
 using InventoryZ.Application.Commands.UpdateProduct;
 using InventoryZ.Application.Queries.GetAllProductsByUser;
+using InventoryZ.Application.Queries.GetProductsSoldByUser;
 using InventoryZ.Application.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -72,6 +73,20 @@ namespace InventoryZ.API.Controllers
                 return BadRequest("Houve um problema ao editar o produto. Tente novamente.");
 
             return Ok("Produto editado com sucesso!");
+        }
+
+        [HttpGet("ProductsSold")]
+        public async Task<IActionResult> GetProductsSold([FromQuery] int idUser)
+        {
+            var product = new GetProductsSoldCommand();
+            product.IdUser = idUser;
+
+            var response = await _mediator.Send(product);
+
+            if (response == null)
+                return BadRequest("Não há produtos vendidos a serem exibidos.");
+
+            return Ok(response);
         }
 
     }

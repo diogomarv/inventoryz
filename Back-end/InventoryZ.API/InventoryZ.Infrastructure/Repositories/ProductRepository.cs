@@ -84,6 +84,28 @@ namespace InventoryZ.Infrastructure.Repositories
             }
         }
 
+        public async Task<List<Product>> GetProductsSoldByUser(int idUser)
+        {
+            using (var sqlConnection = new SqlConnection(connectionString))
+            {
+                string script = @"SELECT
+	                               [Id]
+                                  ,[Name]
+                                  ,[Description]
+                                  ,[Price]
+                                  ,[Amount]
+                                  ,[SoldAmount]
+                                  ,[Date]
+                              FROM [InventoryZ].[dbo].[Product]
+                              WHERE SoldAmount <> 0 AND IdUser = @idUser";
+
+                var products = await sqlConnection.QueryAsync<Product>(script, new { idUser });
+
+                return products.ToList();
+
+            }
+        }
+
         public async Task<bool> InsertProduct(Product product)
         {
 
