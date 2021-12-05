@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&family=Poppins:wght@100;200;300&family=Quicksand:wght@300;400;500;600;700&family=Shippori+Antique+B1&display=swap');
+
+*{
+    font-family: 'Comfortaa', cursive !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Shippori Antique B1', sans-serif !important;
+}
+html, body { height: 100%; background-color: rgb(70, 94, 228); }
+body { margin: 0;
+     font-family: 'Comfortaa', cursive !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Quicksand', sans-serif !important;
+    font-family: 'Shippori Antique B1', sans-serif !important;
+ }
